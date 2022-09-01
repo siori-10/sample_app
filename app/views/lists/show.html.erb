@@ -1,10 +1,11 @@
 <h2>タイトル</h2>
 
-<P><%= @list.title %></P>
+<P><%=@list.title %></P>
 
 <h2>本文</h2>
 
-<p><%= @list.body %></p>
+<p><%=@list.body %></p>
+
 
 <h2>画像</h2>
 
@@ -15,7 +16,7 @@
 <% end %>
 
 <%= link_to"編集",edit_list_path(@list.id) %>
-<%= link_to "削除", destroy_list_path(@list.id),method: :delete,"data-confirm" =>"本当に削除しますか？" %>
+<%= link_to "削除",list_path(@list.id),method: :delete,"data-confirm" =>"本当に削除しますか？" %>
 
 
 
